@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>110 Find the number of even values in sequence before the first occurrence of a given number</title>
+</head>
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-110.php">110</a>
+
+    <script>
+    function find_numbers(arr, num) {
+        var result = 0;
+        for (var i = 0; i <= arr.length; i++) {
+            //確認是不是偶數&在指定數字前
+            if(arr[i] %2 === 0 && arr[i]!==num){
+                result++;
+            }
+            if(arr[i]===num){
+                return result;
+            }
+        }
+        return -1;
+    }
+
+    console.log(find_numbers([1,2,3,4,5,6,7,8], 5)); //2
+    console.log(find_numbers([1,3,5,6,7,8], 6)); //0
+    console.log(find_numbers([1,3,5,6,7,8], 2)); //-1
+    </script>
+</body>
+</html>

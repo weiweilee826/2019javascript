@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>111 Check a number from three given numbers where two numbers are equal, find the third one</title>
+</head>
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-111.php">111</a>
+    <script>
+    function find_two_equals(a,b,c){
+        if(a==b){
+            return c;
+        }else if(a==c){
+            return b;
+        }else if(b==c){
+            return a;
+        }else{
+            return "three numbers are unequal";
+        }
+    }
+
+    console.log(find_two_equals(1,2,2)); //1
+    console.log(find_two_equals(1,2,1)); //2
+    console.log(find_two_equals(1,2,3)); //three numbers are unequal
+    </script>
+    
+</body>
+</html>

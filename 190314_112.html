@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>112 Find the number of trailing zeros in the decimal representation of the factorial of a given number</title>
+</head>
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-112.php">112</a>
+    <script>
+    
+    // function trailing_zeros_factorial(num){
+    //     var result =0;
+    //     var total=1;
+    //     for(var i=0;i<=num;i++){
+    //         total*=i;
+    //     }
+    // }
+
+    function trailing_zeros_factorial (num){
+    var result=0;
+        while(num= Math.floor(num/5)){
+            result+=num;
+        }
+    return result;
+    }
+
+    console.log(trailing_zeros_factorial(8)) //1
+    console.log(trailing_zeros_factorial(10)) //2
+    console.log(trailing_zeros_factorial(125)) //31
+    //125/5=25, 25/5=5, 5/5=1, 25+5+1=31
+    </script>
+    
+</body>
+</html>

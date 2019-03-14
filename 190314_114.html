@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>114 Check whether a given string represents a correct sentence or not</title>
+</head>
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-114.php">114</a>
+    <div><a href="https://regex101.com/">Regular Expressions</a></div>
+
+    <script>
+    //Regular Expressions
+    var check_sentenct=function(str){
+        //^=start of string, .=any single character
+        // match檢查輸入值
+        return str.match(/^[A-Z].+[.]/) ? true : false;
+    }
+    
+    console.log(check_sentenct("This tool will help you write better English and efficiently corrects texts.")); //true
+    console.log(check_sentenct("This tool will help you write better English and efficiently corrects texts")); //false 
+    console.log(check_sentenct("this tool will help you write better English and efficiently corrects texts.")); //false
+    </script>
+    
+</body>
+</html>

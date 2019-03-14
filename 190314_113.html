@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>113 Calculate the sum n + n/2 + n/4 + n/8 + ....</title>
+</head>
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-113.php">113</a>
+
+    <script>
+    function int_sum (num){
+        var result=num;
+        while(num=Math.floor(num/2)){
+            result+=num;
+        }
+        return result;
+    }
+
+    console.log(int_sum(8)) //15
+    console.log(int_sum(9)) //16
+    console.log(int_sum(26)) //49
+    </script>
+    
+</body>
+</html>
