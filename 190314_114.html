@@ -15,7 +15,9 @@
     var check_sentenct=function(str){
         //^=start of string, .=any single character
         // match檢查輸入值
-        return str.match(/^[A-Z].+[.]/) ? true : false;
+        // \.== [.]
+        return str.match(/^[A-Z].+[.]$/) ? true : false;
+        // return Boolean(str.match(/^[A-Z].+[.]$/));
     }
     
     console.log(check_sentenct("This tool will help you write better English and efficiently corrects texts.")); //true

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>116 Find all the possible options to replace the hash in a string</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-116.php">116</a>
+
+    <script>
+        //#換成可以被三整除
+        var divisible_three = function (str) {
+            let arr = [];
+            for (var i = 0; i < 10; i++) {
+                if (Number(str.replace('#', i)) % 3 === 0) {
+                    arr.push(str.replace('#', i));
+                }
+            }
+            return arr;
+        }
+
+        console.log(divisible_three("2#0")) //["210", "240", "270"]
+        console.log(divisible_three("4#2")) //["402", "432", "462", "492"]
+    </script>
+
+</body>
+
+</html>

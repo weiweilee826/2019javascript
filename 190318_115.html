@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>115 Check whether a matrix is a diagonal matrix or not</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-115.php">115</a>
+
+    <script>
+        /*  左上角到右下角除外都是零
+            雙層for
+            i跟j不一樣一定是0
+            1 0 0
+            0 1 0
+            0 0 1 */
+
+        var diagonal_matrix = function (user_matrix) {
+            
+            // var n = user_matrix.length;
+            // for (var i = 1; i < n; i++) {
+            //     for (var j = 0; j < n; j++) {
+            //         if (i!==) {
+
+            //         }
+            //     }
+            // }
+        }
+
+        console.log(diagonal_matrix([
+            [1, 0, 0],
+            [0, 2, 0],
+            [0, 0, 3]
+        ])); //true
+        console.log(diagonal_matrix([
+            [1, 0, 0],
+            [0, 2, 3],
+            [0, 0, 3]
+        ])); //false
+    </script>
+
+</body>
+
+</html>

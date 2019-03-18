@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>118 Check if a given number is in a given range</title>
+</head>
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-118.php">118</a>
+
+    <script>
+        var given_range= function(a,b,c){
+            return a<=b && b<=c;
+        }
+
+        console.log(given_range(1,2,3)); //true
+        console.log(given_range(1,2,-3)); //false
+        console.log(given_range(1.1,1.2,1.3)); //true
+    </script>
+    
+</body>
+</html>
