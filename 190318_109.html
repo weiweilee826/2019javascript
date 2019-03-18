@@ -18,7 +18,7 @@
             var result = [];
             for (var i = 1; i <= num; i++) {
                 for (var j = 2; j < i; j++) {
-                    //被小於的整除就不是質數
+                    // 被小於的整除就不是質數
                     if (i % j === 0) {
                         break;
                     }
@@ -28,6 +28,19 @@
                 }
             }
             return result;
+        }
+
+        function sort_prime2(num) {
+            // 製作陣列 [2,3,4,5,6,...num]
+            var arr = [...Array(num + 1).keys()].slice(2);
+            var ans = [];
+            while (arr.length != 0) {
+                var firstNum = arr.shift();
+                ans.push(firstNum);
+                // 把firstNum的倍數全部砍掉。
+                arr = arr.filter(num => num % firstNum != 0);
+            }
+            return ans;
         }
 
         console.log(find_prime(5)); //[2,3,5]
