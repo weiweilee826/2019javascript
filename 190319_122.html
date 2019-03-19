@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>122 Check whether a given array of integers represents either a strictly increasing or a strictly decreasing
+        sequence</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-122.php">122</a>
+
+    <script>
+        var is_sequence = function (arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] <= arr[i - 1]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+        console.log(is_sequence([1, 2, 3])) //true
+        console.log(is_sequence([1, 2, 2])) //false
+        console.log(is_sequence([-3, -2, -1])) //true
+    </script>
+
+</body>
+
+</html>

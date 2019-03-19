@@ -14,21 +14,19 @@
     <script>
         var increasing_num = function (num) {
             var numArr = num.toString().split('');
-
-            // 下面這句還有個小問題，你自己找找看吧!
-            for (var i = 0; i < numArr.lenght; i++) {
+            for (var i = 0; i < numArr.length; i++) {
                 var thisOne = numArr[i];
                 var nextOne = numArr[i + 1];
                 // 如果下一個數字大於等於這個數字，就表示數字沒有一直增加，不符合題目要求。
-                if(thisOne=>nextOne){
+                if (thisOne >= nextOne) {
                     return false;
                 }
             }
             return true;
         }
-        console.log(increasing_num(123));
-        console.log(increasing_num(1223));
-        console.log(increasing_num(45677));
+        console.log(increasing_num(123)); //true
+        console.log(increasing_num(1223)); //false
+        console.log(increasing_num(45677)); //false
     </script>
 
 </body>

@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>120 Check if a point lies strictly inside a given circle</title>
 </head>
+
 <body>
     <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-120.php">120</a>
 
     <script>
-        // 取得點到圓心的距離l
-        var l = 0;
+        var inside_circle = function (a, b, x, y, r) {
+            var dist_points = (a - x) * (a - x) + (b - y) * (b - y);
+            r *= r;
+            if (dist_points < r) {
+                return true;
+            }
 
-        // 如果l小於半徑r，表示點在圓形裡
-        return l<r;
+            return false;
+            // 取得點到圓心的距離l
+            // var l = 0;
+            // 如果l小於半徑r，表示點在圓形裡
+            // return l < r;
+        }
     </script>
-    
+
 </body>
+
 </html>

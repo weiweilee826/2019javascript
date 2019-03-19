@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>125 Find the longest string from a given array</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-125.php">125</a>
+
+    <script>
+        var longest_str = function (arr) {
+            var str = 0;
+            var result = "";
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].length > str) {
+                    result = arr[i];
+                }
+            }
+            return result;
+        }
+
+        console.log(longest_str(["ab", "a", "abcd"])); //abcd
+        console.log(longest_str(["ab", "ab", "ab"])); //ab
+    </script>
+
+</body>
+
+</html>
