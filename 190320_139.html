@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>139 Find the position of a rightmost round number in an array of integers. Returns 0 if there are no round
+        number</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-139.php">139</a>
+
+    <script>
+        var find_right_round_num = function (arr) {
+            var result = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] % 10 == 0) {
+                    result = i;
+                }
+            }
+            return result;
+        }
+
+        console.log(find_right_round_num([1, 22, 30, 50, 56])); //3
+    </script>
+
+</body>
+
+</html>

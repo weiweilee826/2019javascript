@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>136 Replace the first digit in a string (should contains at least digit) with $ character</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-136.php">136</a>
+
+    <script>
+        var replace_first = function (str) {
+            return str.replace(/[0-9]/, '$');
+        }
+
+        console.log(replace_first("abc1dabc")); //abc$dabc
+        console.log(replace_first("p3ython"));
+        console.log(replace_first("ab1cabc"));
+    </script>
+
+</body>
+
+</html>

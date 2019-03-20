@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>128 Find the smallest round number that is not less than a given value</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-128.php">128</a>
+
+    <script>
+        var nearest_round_number = function (num) {
+            while (num % 10) {
+                num++;
+            }
+            return num;
+        }
+
+        console.log(nearest_round_number(56)); //60
+        console.log(nearest_round_number(592)); //600
+        console.log(nearest_round_number(121)); //130
+    </script>
+
+</body>
+
+</html>

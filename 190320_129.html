@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>129 Find the smallest prime number strictly greater than a given number</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-129.php">129</a>
+
+    <script>
+        var next_prime = function (num) {
+            num++;
+            for (var i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    num++;
+                }
+            }
+            return num;
+        }
+
+        console.log(next_prime(3)); //5
+        console.log(next_prime(17)); //19
+    </script>
+
+</body>
+
+</html>

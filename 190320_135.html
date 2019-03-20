@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>135 Remove all characters from a given string that appear more than once</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-135.php">135</a>
+
+    <script>
+        var remove_duplicate = function (str) {
+            var result = '';
+            for (var i = 0; i < str.length; i++) {
+                if (str.lastIndexOf(str[i]) == str.indexOf(str[i])) {
+                    result += str[i];
+                }
+            }
+            return result;
+        }
+
+        console.log(remove_duplicate("abcdabc")); //d
+        console.log(remove_duplicate("python")); //python
+        console.log(remove_duplicate("abcabc"));
+        console.log(remove_duplicate("1365451")); //364
+        
+    </script>
+
+</body>
+
+</html>

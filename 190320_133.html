@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>133 Check whether a given fraction is proper or not</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-133.php">133</a>
+
+    <script>
+        var proper_or_improper = function (num) {
+            if (num[0] < num[1]) {
+                return "Proper fraction.";
+            } else {
+                return "Improper fraction.";
+            }
+        }
+
+        console.log(proper_or_improper([12, 300]));
+        console.log(proper_or_improper([2, 4]));
+        console.log(proper_or_improper([103, 3]));
+        console.log(proper_or_improper([104, 2]));
+        console.log(proper_or_improper([5, 40]));
+    </script>
+
+</body>
+
+</html>
