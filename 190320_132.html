@@ -12,7 +12,34 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-132.php">132</a>
 
     <script>
-        //不懂題目
+        // 質因數分解
+
+        function prime_factors(num) {
+            var maxSuspect = Math.ceil(Math.sqrt(num));
+            // [2,3,4,...,maxSuspect]
+            var suspects = [...Array(maxSuspect + 1).keys()].slice(2);
+            var criminals = [];
+            // 砍掉倍數，縮小嫌疑人
+            while (suspects.length != 0) {
+                var firstSuspect = suspects.shift();
+                suspects = suspects.filter(suspect => suspect % firstSuspect != 0);
+                if (num%firstSuspect==0) {
+                    criminals.push(firstSuspect);
+                }
+            }
+            if(criminals.length==0){
+                criminals.push(num);
+            }
+            return criminals;
+        }
+
+        console.log(prime_factors(100));
+        console.log(prime_factors(101));
+        console.log(prime_factors(103));
+        console.log(prime_factors(104));
+        console.log(prime_factors(105));
+
+
     </script>
 
 </body>
