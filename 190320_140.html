@@ -12,8 +12,15 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-140.php">140</a>
 
     <script>
+        // return new Set(num + '').size === 1; >>別人寫的，看不懂
+
+        // set的範例
+        var text = 'IndiaIII';
+        var mySet = new Set(text);  // Set ['I', 'n', 'd', 'i', 'a']
+        mySet.size;  // 5
+
         var test_same_num = function (num) {
-            // return new Set(num + '').size === 1; >>別人寫的，看不懂
+            
 
             var arr = num.toString().split('');
             for (var i = 0; i < arr.length-1; i++) {
