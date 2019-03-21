@@ -13,11 +13,9 @@
 
     <script>
         // 質因數分解
-
         function prime_factors(num) {
-            var maxSuspect = Math.ceil(Math.sqrt(num));
             // [2,3,4,...,maxSuspect]
-            var suspects = [...Array(maxSuspect + 1).keys()].slice(2);
+            var suspects = [...Array(num + 1).keys()].slice(2);
             var criminals = [];
             // 找犯人
             while (suspects.length != 0) {
