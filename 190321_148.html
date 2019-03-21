@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>148 Swap two halves of a given array of integers of even length</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-148.php">148</a>
+
+    <script>
+        var halv_array_swap = function (arr) {
+            if (arr.length % 2 == 0) {
+                return arr.concat(arr.splice(0, arr.length / 2));
+            } else {
+                return false;
+            }
+        }
+
+        console.log(halv_array_swap([1, 2, 3, 4, 5, 6])) //[4,5,6,1,2,3]
+        console.log(halv_array_swap([1, 2, 3, 4, 5, 6, 7])) //f
+    </script>
+
+</body>
+
+</html>

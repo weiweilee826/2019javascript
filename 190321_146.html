@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>146 Compute the sum of cubes of all integer from 1 to an given integer</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-146.php">146</a>
+
+    <script>
+        var sum_Of_Cubes = function (num) {
+            var sum = 0;
+            var i = 0;
+            while (i <= num) {
+                sum += Math.pow(i, 3);
+                i++;
+            }
+            return sum;
+        }
+
+        console.log(sum_Of_Cubes(3));
+        console.log(sum_Of_Cubes(4));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>147 Compute the sum of all digits that occur in a given string</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-147.php">147</a>
+
+    <script>
+        var sum_digits_from_string = function (str) {
+            // /\d+/ >抓出數字
+            var num = str.match(/\d+/).map(Number);
+            return num;
+        }
+
+        console.log(sum_digits_from_string("abcd12efg9")) //12
+        console.log(sum_digits_from_string("w3resource")) //3
+    </script>
+
+</body>
+
+</html>

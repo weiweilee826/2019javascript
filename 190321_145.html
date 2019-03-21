@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>145 Find the maximum integer n</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-145.php">145</a>
+
+    <script>
+        var sumn = function (num) {
+            var result = 0;
+            var i = 0;
+            while (i <= num) {
+                i += result++;
+            }
+            return result-2;
+        }
+        console.log(sumn(11)) //4
+        console.log(sumn(15)) //5
+    </script>
+
+</body>
+
+</html>

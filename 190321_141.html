@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>141 Find the number of elements which presents in both of the given arrays.</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-141.php">141</a>
+
+    <script>
+        var same_element = function(arr1, arr2) {
+            //在陣列中找到的第一個元素索引值；沒找到則為 -1
+            return arr1.filter(num => arr2.indexOf(num) !== -1);
+        }
+
+        console.log(same_element([1, 2, 3, 4], [1, 2, 3, 4])); //4
+        console.log(same_element([1, 2, 3, 4], [1, 2, 3, 5])); //3
+        console.log(same_element([1, 2, 3, 4], [11, 22, 33, 44])); //0
+        
+    </script>
+
+</body>
+
+</html>

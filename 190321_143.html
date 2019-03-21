@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>143 Sort the strings of a given array of strings in the order of increasing lengths</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-143.php">143</a>
+
+    <script>
+        //他的範例字串跑的方式好亂喔，我不會改>我的順序跟他跑得不一樣
+        var sort_str = function (arr) {
+            return arr.sort((a, b) => a.length - b.length);
+        }
+
+        console.log(sort_str(["xyz", "acd", "aa", "bb", "zzz", "", "a", "b"]));
+        //["","a","b","bb","aa","xyz","acd","zzz"] >應該要跑這樣
+        //["", "a", "b", "aa", "bb", "xyz", "acd", "zzz"] >我的跑這樣
+
+    </script>
+
+</body>
+
+</html>
