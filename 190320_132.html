@@ -19,15 +19,18 @@
             // [2,3,4,...,maxSuspect]
             var suspects = [...Array(maxSuspect + 1).keys()].slice(2);
             var criminals = [];
-            // 砍掉倍數，縮小嫌疑人
+            // 找犯人
             while (suspects.length != 0) {
                 var firstSuspect = suspects.shift();
+                // 砍掉分身
                 suspects = suspects.filter(suspect => suspect % firstSuspect != 0);
-                if (num%firstSuspect==0) {
+                // 抓犯人
+                if (num % firstSuspect == 0) {
                     criminals.push(firstSuspect);
                 }
             }
-            if(criminals.length==0){
+            // 找不到犯人，表示自己就是犯人。
+            if (criminals.length == 0) {
                 criminals.push(num);
             }
             return criminals;
