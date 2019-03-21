@@ -43,12 +43,14 @@
 
         function prefixSum2(arr) {
             var result = [];
-            arr.reduce(function(sum, num){
-                sum += num; 
-                result.push(sum);
-                return sum;
-            },0);
+            arr.reduce(sum, 0);
             return result;
+        }
+
+        var sum = function (sum, num) {
+            sum += num;
+            result.push(sum);
+            return sum;
         }
 
 
