@@ -12,15 +12,24 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-141.php">141</a>
 
     <script>
-        var same_element = function(arr1, arr2) {
+        var same_element = function (arr1, arr2) {
             //在陣列中找到的第一個元素索引值；沒找到則為 -1
             return arr1.filter(num => arr2.indexOf(num) !== -1);
         }
 
-        console.log(same_element([1, 2, 3, 4], [1, 2, 3, 4])); //4
-        console.log(same_element([1, 2, 3, 4], [1, 2, 3, 5])); //3
-        console.log(same_element([1, 2, 3, 4], [11, 22, 33, 44])); //0
-        
+        var same_element2 = function (arr1, arr2) {
+            return arr1.reduce((sum, v, i) => sum += (v == arr2[i] ? 1 : 0), 0);
+        }
+
+        console.log(same_element2([1, 2, 3, 4], [1, 2, 3, 4])); //4
+        console.log(same_element2([1, 2, 3, 4], [1, 2, 3, 5])); //3
+        console.log(same_element2([1, 2, 3, 4], [11, 22, 33, 44])); //0
+
+        // 可惜 這題寫錯了
+        console.log(same_element2([1, 2, 3, 4], [4, 3, 2, 1])); //0
+
+
+
     </script>
 
 </body>
