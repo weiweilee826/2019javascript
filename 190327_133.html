@@ -12,7 +12,6 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-133.php">133</a>
 
     <script>
-
         var proper_or_improper = function (num) {
             if (num[0] < num[1]) {
                 return "Proper fraction.";
@@ -22,14 +21,15 @@
         }
 
         var proper_or_improper2 = function (num) {
-            return  num[0] < num[1] ? "Proper fraction." : "Improper fraction." ;
+            return num[0] < num[1] ? "Proper fraction." : "Improper fraction.";
         }
 
-        console.log(proper_or_improper([12, -300]));
-        // 12/-300也是分數，不過你現在寫的會return Improper fraction.
-
+        // 12/-300也是分數，不過你現在寫的會return Improper fraction. 
+        // 上面那個不是原本就應該回傳return Improper fraction嗎? 不是正數就是Improper?
+        console.log(proper_or_improper2([12, 300])); //Proper
+        console.log(proper_or_improper2([12, -300])); //Improper
+        
     </script>
-
 </body>
 
 </html>

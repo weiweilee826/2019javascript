@@ -12,13 +12,15 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-136.php">136</a>
 
     <script>
-        // 如果要把所有數字都改成$，怎麼寫？
         var replace_first = function (str) {
-            return str.replace(/[0-9]/, '$');
+            // return str.replace(/[0-9]/, '$'); >只取代第一個數字
+
+            // 如果要把所有數字都改成$，怎麼寫？
+            return str.replace(/[0-9]/g,'$'); 
         }
 
-        console.log(replace_first("abc1dab1")); //abc$dabc
-        console.log(replace_first("p3ython"));
+        console.log(replace_first("abc1dab1")); //abc$dab$
+        console.log(replace_first("p3ython")); 
         console.log(replace_first("ab1cabc"));
     </script>
 

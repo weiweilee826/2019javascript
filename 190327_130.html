@@ -24,9 +24,15 @@
             return result;
         }
 
-        console.log(find_even_number(123)); //1
-        console.log(find_even_number(1020)); //3
-        console.log(find_even_number(102)); //2
+
+        var find_even_number1 = function (num) {
+            return (num+'').match(/[02468]/g).length;
+        }
+
+
+        console.log(find_even_number1(123)); //1
+        console.log(find_even_number1(1020)); //3
+        console.log(find_even_number1(102)); //2
     </script>
 
 </body>

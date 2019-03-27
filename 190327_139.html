@@ -27,7 +27,12 @@
             return result;
         }
 
-        console.log(find_right_round_num([1, 22, 30, 50, 56])); //3
+        var find_right_round_num1 = function (arr) {
+            //我的只會找到第一個
+            return arr.findIndex(arr => arr % 10 == 0);
+        }
+
+        console.log(find_right_round_num1([1, 22, 30, 50, 56])); //3
     </script>
 
 </body>

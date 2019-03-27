@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2 A passed string is palindrome or not</title>
+</head>
+
+<body>
+    <div>檢查是不是回文</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-2.php">2</a>
+
+    <script>
+        var check_Palindrome = function (str) {
+            if (str == str.split('').reverse().join('')) {
+                return "The entry is a palindrome.";
+            } else {
+                return "Entry is not a palindrome.";
+            }
+        }
+
+        console.log(check_Palindrome('madam'));
+        console.log(check_Palindrome('nurses run'));
+        console.log(check_Palindrome('fox'));
+
+    </script>
+
+</body>
+
+</html>

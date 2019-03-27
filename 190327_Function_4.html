@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4 Returns a passed string with letters in alphabetical order</title>
+</head>
+
+<body>
+    <div>按照字母順率排列字串</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-4.php">4</a>
+
+    <script>
+        var alphabetical = function (str) {
+            return str.split('').sort().join('');
+        }
+
+        console.log(alphabetical("webmaster")); //abeemrstw
+        console.log(alphabetical("gfedcba")); //abcdefg
+        
+    </script>
+
+</body>
+
+</html>

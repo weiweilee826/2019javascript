@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7 ounts the number of vowels within a string</title>
+</head>
+
+<body>
+    <div>找字串中"母音"的數量 (a,e,i,o,u)</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-7.php">7</a>
+
+    <script>
+        var vowel_count = function (str) {
+            //g>搜索全部字串，i>不分大小寫。 matches the characters gi↵ literally (case sensitive)
+            return str.match(/[aeiou]/gi).length;
+        }
+
+        console.log(vowel_count("The quick brown fox")); //5
+    </script>
+
+</body>
+
+</html>
