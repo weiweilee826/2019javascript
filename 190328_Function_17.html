@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>17 Number of occurrences of each letter in specified string</title>
+</head>
+
+<body>
+    <div>檢查每個字元出現的次數</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-17.php">17</a>
+
+    <script>
+        //arr.forEach(function callback(currentValue[, index[, array]]) {/your iterator}[, thisArg]);
+
+        var Char_Counts = function (str) {
+            let result = {}
+            str.split('').sort().forEach(w => {
+                result[w] = (result[w] ? result[w] + 1 : 1);
+            });
+            return result;
+        }
+
+        console.log(Char_Counts("The quick brown fox jumps over the lazy dog"));
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>11 Find the second lowest and second greatest numbers from an array</title>
+</head>
+
+<body>
+    <div>取陣列中的第二個跟倒數第二個的值</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-11.php">11</a>
+
+    <script>
+        var Second_Greatest_Lowest = function (array) {
+            var result = array.sort();
+            return result[1] + ',' + result[result.length - 2];
+        }
+
+        console.log(Second_Greatest_Lowest([1, 9, 3, 4, 5])); //3,5
+    </script>
+
+</body>
+
+</html>

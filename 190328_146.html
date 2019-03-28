@@ -23,9 +23,18 @@
         }
 
         // 用for寫寫看
+        var sum_Of_Cubes1 = function (num) {
+            var sum = 0;
 
-        console.log(sum_Of_Cubes(3));
-        console.log(sum_Of_Cubes(4));
+            for (var i = 1; i <= num; i++) {
+                sum += Math.pow(i, 3);
+            }
+            return sum;
+        }
+
+        console.log(sum_Of_Cubes1(3)); //36
+        console.log(sum_Of_Cubes1(4)); //100
+
     </script>
 
 </body>

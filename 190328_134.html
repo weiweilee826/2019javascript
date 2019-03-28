@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>134 Change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x,
+        ..., n turns into m, m turns into n, ..., z turns into a</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-134.php">134</a>
+
+    <script>
+        //反轉取代字母
+        // A+Z=1+26
+
+        var change_char = function (str) {
+            var result = [];
+            for (var i = 0; i < 26; i++) {
+                //fromCharCode>可接受一个指定的Unicode值，然後返回一个字符
+                // 97>a
+                result[String.fromCharCode(97 + i)] = String.fromCharCode(97 + 25 - i);
+            }
+            return str.split('').map(x => result[x]).join('');
+        }
+
+        console.log(change_char("abcxyz")); //zyxcba
+        console.log(change_char("python")); //kbgslm
+        
+    </script>
+
+</body>
+
+</html>

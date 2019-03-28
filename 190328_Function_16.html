@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>16 Extract unique character from a string</title>
+</head>
+
+<body>
+    <div>去除出現過的字母</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-16.php">16</a>
+    <a href="http://es6.ruanyifeng.com/#docs/set-map">set and map</a>
+
+    <script>
+        var unique_char = function (str) {
+            // return new Set(str);
+            return [...new Set(str)].join('');
+        }
+
+        console.log(unique_char("thequickbrownfoxjumpsoverthelazydog")); //thequickbrownfxjmpsvlazydg
+
+    </script>
+
+</body>
+
+</html>

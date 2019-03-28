@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <!-- 不會 -->
     <div>列出所有字串組合</div>
     <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-3.php">3</a>
 
@@ -56,6 +55,24 @@
 
         console.log(subStr("abc"));
 
+        // ============================================================================
+
+        var subArray4 = function (array) {
+            var result = [];
+            if (array.length == 0) {
+                return result;
+            }
+            //d
+            result.push(array[0]);
+            var partArray = subArray4(array.slice(1, array.length));
+            // ...把陣列拆開
+            result.push(...partArray); // og所有組合
+            result.push(...partArray.map(x => array[0] + x)); //d+og組合
+            return result;
+        }
+
+        console.log(subArray4("dog")); //["d", "o", "g", "og", "do", "dg", "dog"]
+        console.log(subArray4("poan"));
     </script>
 
 </body>

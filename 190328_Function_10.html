@@ -9,11 +9,25 @@
 </head>
 
 <body>
-    <div>??</div>
+    <div>matrix</div>
     <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-10.php">10</a>
 
     <script>
-        //不喜歡matrix
+        function matrix(num) {
+            var arr = [];
+            for (var i = 0; i < num; i++) {
+                for (var j = 0; j < num; j++) {
+                    if (i === j) {
+                        arr.push(1);
+                    } else {
+                        arr.push(0);
+                    }
+                }
+            }
+            return arr;
+        }
+
+        console.log(matrix(5));
         
     </script>
 

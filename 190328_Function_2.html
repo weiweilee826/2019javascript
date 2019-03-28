@@ -14,17 +14,13 @@
 
     <script>
         var check_Palindrome = function (str) {
-            if (str == str.split('').reverse().join('')) {
-                return "The entry is a palindrome.";
-            } else {
-                return "Entry is not a palindrome.";
-            }
+            return str == str.split('').reverse().join('') ? "The entry is a palindrome." :
+                "Entry is not a palindrome.";
         }
 
-        console.log(check_Palindrome('madam'));
-        console.log(check_Palindrome('nurses run'));
-        console.log(check_Palindrome('fox'));
-
+        console.log(check_Palindrome('madam')); //The entry is a palindrome.
+        console.log(check_Palindrome('nurses run')); //Entry is not a palindrome.
+        console.log(check_Palindrome('fox')); //Entry is not a palindrome.
     </script>
 
 </body>
