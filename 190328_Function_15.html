@@ -14,7 +14,23 @@
 
     <script>
         // 甚麼是指數阿?
-        
+        // var exp = function (b, n) {
+        //     return Math.pow(b, n);
+        // }
+
+        var exp1 = function (b, n) {
+            var result = 1;
+            for (var i = 0; i < n; i++) {
+                result *= b;
+            }
+            return result;
+        }
+
+        var exp = function (b, n) {
+            return b**n;
+        }
+
+        console.log(exp(2, 3));
     </script>
 
 </body>

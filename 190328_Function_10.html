@@ -16,19 +16,20 @@
         function matrix(num) {
             var arr = [];
             for (var i = 0; i < num; i++) {
+                var z = [];
                 for (var j = 0; j < num; j++) {
                     if (i === j) {
-                        arr.push(1);
+                        z.push(1);
                     } else {
-                        arr.push(0);
+                        z.push(0);
                     }
                 }
+                arr.push(z);
             }
             return arr;
         }
 
         console.log(matrix(5));
-        
     </script>
 
 </body>

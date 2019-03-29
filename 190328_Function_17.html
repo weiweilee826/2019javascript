@@ -17,14 +17,14 @@
 
         var Char_Counts = function (str) {
             let result = {}
-            str.split('').sort().forEach(w => {
-                result[w] = (result[w] ? result[w] + 1 : 1);
-            });
+            for (var w of str.replace(/\s/g, '').split("")) {
+                result[w] = result[w] ? ++result[w] : 1;
+            }
             return result;
         }
 
+        console.log(Char_Counts("oo o"));
         console.log(Char_Counts("The quick brown fox jumps over the lazy dog"));
-
     </script>
 
 </body>

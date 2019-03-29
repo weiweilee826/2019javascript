@@ -13,8 +13,34 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-12.php">12</a>
 
     <script>
-        //不懂題目
+        var is_perfect = function (num) {
+            var result = [];
+            for (var i = 1; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    result.push(i);
+                }
+            }
+            var b = result.reduce((sum,v) => sum + v + num/v ,0);
 
+            return b;
+        }
+
+        // var is_perfect1 = function (num) {
+        //     var result = 0;
+        //     for (var i = 0; i < num; i++) {
+        //         if (num % i == 0) {
+        //             result += i;
+        //         }
+        //     }
+        //     if (result == num) {
+        //         return "It is a perfect number.";
+        //     } else {
+        //         return "It is not a perfect number.";
+        //     }
+        // }
+
+        console.log(is_perfect(28)) //It is a perfect number.
+        console.log(is_perfect(11)) //It is not a perfect number.
     </script>
 
 </body>
