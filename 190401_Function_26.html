@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>26 Find longest substring in a given a string without repeating characters</title>
+</head>
+
+<body>
+    <div>去除字串中重複的字元</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-26.php"></a>
+
+    <script>
+        var without_repeating = function (str) {
+            var result = "";
+            for (var i = 0; i < str.length; i++) {
+                if (result.indexOf(str[i]) === -1) {
+                    result += str[i];
+                }
+            }
+            return result;
+        }
+
+        //別人寫的看不太懂
+        var without_repeating1 = function (str) {
+            return str.replace(/[\s\S](?=([\s\S]+))/g, function (c, s) {
+                return s.indexOf(c) + 1 ? '' : c;
+            });
+        }
+
+        console.log(without_repeating("google.com"));
+        console.log(without_repeating1("example.com"));
+
+    </script>
+
+</body>
+
+</html>

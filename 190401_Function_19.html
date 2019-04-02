@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>19 Bigger elements in an array</title>
+</head>
+
+<body>
+    <div>輸出比指定數字大的陣列內容</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-19.php">19</a>
+
+    <script>
+        var BiggerElements = function (arr, num) {
+            return arr.filter(n => n >= num);
+        }
+
+        console.log(BiggerElements([11, 45, 4, 31, 64, 10], 10)) //[11,45,31,64,10]
+        
+    </script>
+
+</body>
+
+</html>

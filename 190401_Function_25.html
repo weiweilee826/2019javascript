@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>25 Find longest word</title>
+</head>
+
+<body>
+    <div>找出最長國家名</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-25.php"></a>
+
+    <script>
+        var Longest_Country_Name = function (arr) {
+            return arr.sort((a, b) => a > b)[arr.length - 1];
+        }
+
+        console.log(Longest_Country_Name(["Australia", "Germany", "United States of America"]));
+        
+    </script>
+
+</body>
+
+</html> 

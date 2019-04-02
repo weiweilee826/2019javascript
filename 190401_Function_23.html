@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>23</title>
+</head>
+
+<body>
+    <div>回傳第一個沒有重複的字元</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-23.php"></a>
+
+    <script>
+        var find_FirstNotRepeatedChar = function (str) {
+            for (var i = 0; i < str.length; i++) {
+                if (str.indexOf(str[i]) == str.lastIndexOf(str[i])) {
+                    return str[i];
+                }
+            }
+        }
+
+        console.log(find_FirstNotRepeatedChar('abacddbecg')); //e
+    </script>
+
+</body>
+
+</html>

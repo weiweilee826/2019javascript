@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>22 Letter count within a string</title>
+</head>
+
+<body>
+    <div>檢查指定字元出現的次數</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-17.php">17</a>
+
+    <script>
+        var char_count = function (str, letter) {
+            return str.split("").filter(l => l === letter).length;
+        }
+
+        console.log(char_count('w3resource.com', 'o')); //2
+
+    </script>
+
+</body>
+
+</html>
