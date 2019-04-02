@@ -15,13 +15,25 @@
     <script>
         // 有問題
         var longest_palindrome = function (str) {
-          
+            for (var i = str.length; i => 0; i--) {
+                for (var j = 0; j <= str.length - i; j++) {
+                    var subStr = str.slice(j, j + i);
+                    if (isPal(subStr.split(''))) {
+                        return subStr;
+                    }
+                }
+            }
+        }
+
+        var isPal = function (str) {
+            if (str.length < 2) { return true };
+            return str.shift() == str.pop() && isPal(str);
         }
 
         console.log(longest_palindrome("abracadabra"));
         console.log(longest_palindrome("HYTBCABADEFGHABCDEDCBAGHTFYW12345678987654321ZWETYGDE"));
 
-       
+
     </script>
 
 </body>

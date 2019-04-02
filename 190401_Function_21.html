@@ -15,18 +15,19 @@
     <script>
         //有問題
         var subset = function (arr, num) {
-            var result = [];
-            for (var i = 0; i <= arr.length; i++) {
-                var arr2 = [];
-                for (var j = 1; j <= arr; j++) {
-                    result.push([arr[i], arr[j]]);
-                }
-            }
-            return result;
+
+            if (arr.length == num) { return [arr] };
+            if (num == 1) { return arr.map(a => [a]) };
+
+            var subArr = arr.slice(1, arr.length);
+            var headArr = subset(subArr, num - 1).map(a => [arr[0], ...a]);
+            var headlessArr = subset(subArr, num);
+
+            return headArr.concat(headlessArr);
         }
-        
-        console.log(subset([1, 2, 3], 2));
-        
+
+        console.log(subset([1, 2, 3, 4], 2));
+
     </script>
 
 </body>
