@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4 Compute the sum of an array of integers</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-recursion-function-exercise-4.php"></a>
+
+    <script>
+        //不會
+        var array_sum = function (arr) {
+            return arr.length == 1 ? arr[0] : arr[0] + array_sum(arr);
+        }
+
+        console.log(array_sum([1, 2, 3, 4, 5, 6])); //21
+    </script>
+
+</body>
+
+</html>
