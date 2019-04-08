@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3 sub of a string</title>
+</head>
+
+<body>
+    <!-- 不會 -->
+    <div>列出所有字串組合</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-function-exercise-3.php">3</a>
+
+    <script>
+        var subStr = function (str) {
+            var array = str.split("");
+            return subArray2(array);
+        }
+
+        var subArray = function (array) {
+            var result = [];
+            for (var i = 0; i < array.length; i++) {
+                var subArrays = subArray(array.slice(i + 1));
+                result.push(array[i]);
+                result.push(...subArrays.map(str => array[i] + str));
+            }
+            return result;
+        }
+
+        var subArray2 = function (array) {
+            var result = [];
+            result.push(array[0]);
+            var partArray = subArray2(array.slice(1, array.length));
+            result.push(...partArray);  // bcd所有組合
+            result.push(...partArray.map(x => array[0] + x));
+            return result;
+        }
+
+        var subArray3 = function (array) {
+            var result = [];
+            for (var i = 1; i <= Math.pow(2, array.length) - 1; i++) {
+                var numArray = i.toString(2).padStart(array.length, "0").split("");
+                result.push(showStr(array, numArray));
+            }
+            return result;
+        }
+
+        var showStr = function (array, numArray) {
+            return array.reduce((sum, char, i) => sum + (numArray[i] == 1 ? char : ""), "");
+        }
+
+        console.log(subStr("abc"));
+
+    </script>
+
+</body>
+
+</html>
