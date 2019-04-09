@@ -15,7 +15,7 @@
     <script>
         // 有問題
         var longest_palindrome = function (str) {
-            for (var i = str.length; i => 0; i--) {
+            for (var i = str.length; i > 0; i--) {
                 for (var j = 0; j <= str.length - i; j++) {
                     var subStr = str.slice(j, j + i);
                     if (isPal(subStr.split(''))) {
