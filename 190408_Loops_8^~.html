@@ -10,11 +10,42 @@
 
 <body>
     <div></div>
-    <a href="https://www.w3resource.com/javascript-exercises/javascript-conditional-statements-and-loops-exercise-8.php"></a>
+    <a
+        href="https://www.w3resource.com/javascript-exercises/javascript-conditional-statements-and-loops-exercise-8.php"></a>
 
     <script>
-        //不會
-        
+        function find_happy_number(num) {
+            var result = [];
+            for (i = 1; result.length < 5; i++) {
+                if (isHappyNum2(i)) {
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        function isHappyNum(num) {
+            var group = [];
+            while (!group[num] && num != 1) {
+                group[num] = true;
+                num = (num + '').split('').reduce((pv, cv) => pv + cv ** 2, 0);
+            }
+            return num == 1;
+        }
+
+        function isHappyNum2(num, group) {
+            group = group ? group : [];
+            if (num == 1 || group[num]) {
+                return num == 1;
+            } else {
+                var nextNum = (num + '').split('').reduce((pv, cv) => pv + cv ** 2, 0);
+                group[num] = true;
+                return isHappyNum2(nextNum, group);
+            }
+        }
+
+        console.log(find_happy_number(5));
+
     </script>
 
 </body>

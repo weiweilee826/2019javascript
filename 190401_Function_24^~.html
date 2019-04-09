@@ -14,11 +14,22 @@
 
     <script>
         var bubble_Sort = function (arr) {
-            return arr.sort((a, b) => b - a);
+            do{
+                var hasSwap = false;
+                for (i = 0; i < arr.length - 1; i++) {
+                    if (arr[i] > arr[i + 1]) {
+                        var temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                        hasSwap = true;
+                    }
+                }
+            } while(hasSwap)
+            return arr;
         }
 
-        console.log(bubble_Sort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
-        //[3223,546,455,345,234,213,122,98,84,64,23,12,9,4,1]
+        console.log(bubble_Sort([2, 3, 1, 4]));
+
 
     </script>
 
