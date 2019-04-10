@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7 Use recursion to determine if a number is or not</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-recursion-function-exercise-7.php"></a>
+
+    <script>
+        var even = function (num) {
+            if (num == 0) {
+                return true;
+            } else if (num == 1) {
+                return false;
+            } else {
+                return num > 0 ? even(num - 2) : even(num + 2)
+            }
+        }
+
+        console.log(even(234)); //true
+        console.log(even(-45)); // false
+        console.log(even(1)); // false
+        console.log(even(-2)); // true
+
+    </script>
+
+</body>
+
+</html>

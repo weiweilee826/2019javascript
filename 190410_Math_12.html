@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>12 Checking for Natural Number</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-12.php"></a>
+
+    <script>
+        function natural_num(num) { 
+            if (num < 0) {
+                return false;
+            }
+            // isInteger>return boolean
+            return Number.isInteger(num);
+        }
+
+        console.log(natural_num(-15));
+        console.log(natural_num(1));
+        console.log(natural_num(10.22));
+        console.log(natural_num(10 / 0));
+        
+    </script>
+
+</body>
+
+</html>

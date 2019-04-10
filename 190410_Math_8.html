@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8 GCD of two numbers</title>
+</head>
+
+<body>
+    <div>求兩個數字的最大公因數(GCD)</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-8.php"></a>
+
+    <script>
+        var gcd = function (a,b) {
+            return b == 0 ? a : gcd(b, a % b)
+        }
+
+        console.log(gcd(12, 13)); //1
+        console.log(gcd(9, 3)); //3
+
+    </script>
+
+</body>
+
+</html>
