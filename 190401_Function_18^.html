@@ -20,7 +20,7 @@
                 var mid = Math.floor(arr.length / 2);
                 var targetInLeft = target < arr[mid];
                 var startPoint = targetInLeft ? 0 : mid;
-                var endPoint = targetInLeft ? mid:arr.length;
+                var endPoint = targetInLeft ? mid : arr.length;
                 var index = binarySearch(arr.slice(startPoint, endPoint), target);
                 result = index != null ? index + startPoint : null;
             }
