@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>19 Pythagorean Theorem</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-17.php"></a>
+
+    <script>
+        function pythagorean_theorem(a, b) {
+            return ((typeof a !== 'number') || (typeof b !== 'number')) ? false : Math.sqrt(a * a + b * b);
+        }
+
+        console.log(pythagorean_theorem(2, 4)); //4.47213595499958
+        console.log(pythagorean_theorem(3, 4)); //5
+    </script>
+
+</body>
+
+</html>

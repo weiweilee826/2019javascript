@@ -13,6 +13,14 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-11.php"></a>
 
     <script>
+        var lcm_more_than_two_numbers = function (arr) {
+            var gcd = (a, b) => a ? gcd(b % a, a) : b;
+            var lcm = (a, b) => a * b / gcd(a, b);
+            return arr.reduce(lcm);
+        }
+
+        console.log(lcm_more_than_two_numbers([100, 90, 80, 7])); //25200
+        console.log(lcm_more_than_two_numbers([5, 10, 15, 25])); //150
         
     </script>
 

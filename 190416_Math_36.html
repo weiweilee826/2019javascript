@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>36 return values that are powers of two</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-36.php"></a>
+
+    <script>
+        function isPower_of_two(num) {
+            //The Math.log2() function returns the base 2 logarithm of a number
+            return Math.log2(num) % 1 === 0;
+        }
+
+        console.log(isPower_of_two(64)); //t
+        console.log(isPower_of_two(94)); //f
+
+    </script>
+
+</body>
+
+</html>

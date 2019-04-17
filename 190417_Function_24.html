@@ -14,7 +14,7 @@
 
     <script>
         var bubble_Sort = function (arr) {
-            do{
+            do {
                 var hasSwap = false;
                 for (i = 0; i < arr.length - 1; i++) {
                     if (arr[i] > arr[i + 1]) {
@@ -24,13 +24,25 @@
                         hasSwap = true;
                     }
                 }
-            } while(hasSwap)
+            } while (hasSwap)
             return arr;
         }
 
-        console.log(bubble_Sort([2, 3, 1, 4]));
+        var bubble_Sort1 = function (arr) {
+            var l = arr.length;
+            for (var i = 0; i < l - 1; i++) {
+                for (var j = i + 1; j < l; j++) {
+                    if (arr[i] < arr[j]) {
+                        var temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
 
-
+        console.log(bubble_Sort1([2, 3, 1, 4]));
     </script>
 
 </body>

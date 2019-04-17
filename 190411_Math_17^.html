@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>17 Sum of values in an array</title>
+</head>
+
+<body>
+    <div>計算陣列中的總和</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-17.php"></a>
+
+    <script>
+        function sum(arr) {
+            //typeof arr !== 'number'
+            return toString.call(arr) !== "[object Array]" ? false : arr.reduce((a, b) => a + b, 0);
+        }
+
+        console.log(sum([1, 2, 3]));
+        console.log(sum([100, -200, 3]));
+        console.log(sum([1, 2, 'a', 3]));
+    </script>
+
+</body>
+
+</html>

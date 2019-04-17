@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>15 Check whether a value is an integer or not</title>
+</head>
+
+<body>
+    <div>檢查是不是整數</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-15.php"></a>
+
+    <script>
+        function is_Int(num) {
+            // Number.isInteger(value) >The value to be tested for being an integer
+            return typeof num !== 'number' ? false : Number.isInteger(num);
+        }
+        
+        console.log(is_Int(23)); //t
+        console.log(is_Int(4e2)); //t
+        console.log(is_Int(NaN)); //f
+        console.log(is_Int(23.75)); //f
+        console.log(is_Int(-23)); //t
+
+    </script>
+
+</body>
+
+</html>

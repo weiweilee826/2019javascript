@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>28 JavaScript function to round up an integer value to the next multiple of 5</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-28.php"></a>
+    <script>
+        //It's just a variation of the common rounding number to nearest multiple of x function  Math.round(number/x)*x, but using .ceil instead of .round makes it always round up instead of down/up according to mathematical rules.
+
+        function int_round5(num) {
+            return Math.ceil(num / 5) * 5;
+        }
+
+        console.log(int_round5(32)); //35
+        console.log(int_round5(137)); //140
+        console.log(int_round5(142)); //145
+        
+    </script>
+
+</body>
+
+</html>
