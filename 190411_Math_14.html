@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>14 Round a number to a given decimal places</title>
+</head>
+
+<body>
+    <div>四捨五入制指定的小數位</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-14.php"></a>
+
+    <script>
+        function precise_round(num, dec) {
+            return (typeof num !== 'number') || (typeof dec !== 'number') ? false : num.toFixed(dec);
+        }
+
+        console.log(precise_round(12.375, 2)); //12.38
+        console.log(precise_round(12.37499, 2)); //12.37
+        console.log(precise_round(-10.3079499, 3)); //-10.308
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>9 Merge sort - recursion</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-recursion-function-exercise-9.php"></a>
+
+    <script>
+        Array.prototype.merge_Sort = function () {
+            if (this.length <= 1) {
+                return this;
+            }
+
+            // this = [2,4,3,1,5]
+            var half = parseInt(this.length / 2);                       //half=2
+            var left = this.slice(0, half).merge_Sort();                //left=[2,4]
+            var right = this.slice(half, this.length).merge_Sort();     //right=[1,3,5]
+
+            var arry = [];
+            while (left.length > 0 && right.length > 0) {
+                arry.push((left[0] <= right[0]) ? left.shift() : right.shift());
+            }
+
+            // 1<2  l[2,4]  r[3,5]  array=[1]
+            // 2<3  l[4]    r[3,5]  array=[1,2]
+            // 3<4  l[4]    r[5]    array=[1,2,3]
+            // 4<5  l[]     r[5]    array=[1,2,3,4]
+            //      l[]     r[]     array=[1,2,3,4,5]
+
+            return arry.concat(left).concat(right);
+        };
+
+        var a = [34, 7, 23, 32, 5, 62];
+        console.log(a.merge_Sort());
+    </script>
+
+</body>
+
+</html>

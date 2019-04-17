@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8 Binary search using recursion</title>
+</head>
+
+<body>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-recursion-function-exercise-8.php"></a>
+
+    <script>
+        // 沒有用遞迴
+        function br_search(arr, num) {
+            var low = 0;
+            var high = arr.length - 1;
+
+            while (low <= high) {
+                var mid = Math.floor((low + high) / 2);
+                if (arr[mid] === num) {
+                    return mid;
+                } else if (arr[mid] > num) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
+                }
+            }
+        }
+
+        console.log(br_search([0, 1, 2, 3, 4, 5, 6], 5));
+
+    </script>
+
+</body>
+
+</html>

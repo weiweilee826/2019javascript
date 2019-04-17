@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>37 to limit a value inside a certain range</title>
+</head>
+
+<body>
+    <div>如果該值高於max，則返回最大值。如果該值小於min，則返回min</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-37.php"></a>
+    <script>
+        function value_limit(num, min, max) {
+            if (num < min) {
+                return min
+            } else if (num > max) {
+                return max;
+            } else {
+                return num;
+            }
+        }
+
+        console.log(value_limit(7, 1, 12)); //7
+        console.log(value_limit(-7, 0, 12)); //0
+        console.log(value_limit(15, 0, 12)); //12
+
+    </script>
+
+</body>
+
+</html>

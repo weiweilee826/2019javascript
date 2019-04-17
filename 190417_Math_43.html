@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>43 to get all prime numbers from 0 to num</title>
+</head>
+
+<body>
+    <div>列出指定數字以下的所有質數</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-43.php"></a>
+    <script>
+        function sort_prime(num) {
+            var result = [];
+            for (var i = 1; i <= num; i++) {
+                for (var j = 2; j < i; j++) {
+                    if (i % j === 0) {
+                        break;
+                    }
+                }
+                if (i <= j && i != 1) {
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        console.log(sort_prime(5)) //[2,3,5]
+        console.log(sort_prime(11)) //[2,3,5,7,11]
+        console.log(sort_prime(19)) //[2,3,5,7,11,13,17,19]
+    </script>
+
+</body>
+
+</html>
