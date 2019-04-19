@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6 Insert dashes (-) between even numbers</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-6.php"></a>
+
+    <script>
+        function dashes(num) {
+            var arr = [];
+            for (var i = 0; i < num.length; i++) {
+                if ((num[i] % 2 === 0) && num[i + 1] % 2 === 0) {
+                    arr.push(num[i] + '-');
+                } else {
+                    arr.push(num[i]);
+                }
+            }
+            return arr.join('');
+        }
+
+        console.log(dashes('025468')); //0-254-6-8
+        
+    </script>
+
+</body>
+
+</html>

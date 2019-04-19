@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8 Write a JavaScript program to find the most frequent item of an array. - w3resource</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-8.php"></a>
+
+    <script>
+        function items(arr) {
+            var times = arr.filter(n => Math.max(n.length));
+            return times.length + ' times ' + times[0];
+        }
+
+        console.log(items([3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3])); //
+        
+    </script>
+
+</body>
+
+</html>

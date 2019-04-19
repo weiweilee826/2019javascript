@@ -14,7 +14,7 @@
 
     <script>
         function is_Numeric(num) {
-            return Number.isInteger(num);
+            return !isNaN(parseFloat(num)) && isFinite(num);
         }
 
         console.log(is_Numeric(12));

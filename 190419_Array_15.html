@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>15 Display colors using ordinal numbers</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-15.php"></a>
+
+    <script>
+        var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+        var o = ["th", "st", "nd", "rd"];
+
+        for (var i = 0; i < color.length; i++) {
+            if (i < o.length - 1) {
+                console.log(i + 1 + o[i + 1] + ' choice is ' + color[i]);
+            } else if (i >= o.length - 1) {
+                console.log(i + 1 + o[0] + ' choice is ' + color[i]);
+            }
+        }
+
+        // 1st choice is Blue .
+        // 2nd choice is Green.
+        // 3rd choice is Red.
+        // 4th choice is Orange.
+        // 5th choice is Violet.
+        // 6th choice is Indigo.
+        // 7th choice is Yellow.
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>18 Binary Search</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-18.php"></a>
+
+    <script>
+        var binary_Search = function (arr, target) {
+            var reuslt;
+            if (arr.length == 1) {
+                result = arr[0] == target ? 0 : null;
+            } else {
+                var mid = Math.floor(arr.length / 2);
+                var targetInLeft = target < arr[mid];
+                var startPoint = targetInLeft ? 0 : mid;
+                var endPoint = targetInLeft ? mid : arr.length;
+                var index = binary_Search(arr.slice(startPoint, endPoint), target);
+                result = index != null ? index + startPoint : null;
+            }
+            return result;
+        }
+
+        var myArray = [1, 2, 3, 4, 5, 7, 8, 9];
+        console.log(binary_Search(myArray, 5)); //4
+
+    </script>
+
+</body>
+
+</html>

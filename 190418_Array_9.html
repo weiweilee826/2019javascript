@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>9 Swap the case of each character of a string</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-9.php"></a>
+
+    <script>
+        function swap_case(str) {
+            var result = str.split('').map(w => (w.toLowerCase() == w) ? w.toUpperCase() : w.toLowerCase());
+            return result.join('');
+        }
+
+        console.log(swap_case('The Quick Brown Fox')) //tHE qUICK bROWN fOX
+    </script>
+
+</body>
+
+</html>
