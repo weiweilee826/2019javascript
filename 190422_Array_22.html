@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>22 JS Bin</title>
+</head>
+
+<body>
+    <div>排列兩個陣列的順序，去除重複的</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-22.php"></a>
+
+    <script>
+        function union(arr1, arr2) {
+            var arr = arr1.concat(arr2);
+            return arr.filter((item, index) => arr.indexOf(item) == index).sort(function (a, b) {
+                return a > b ? 1 : -1
+            });
+        }
+
+        console.log(union([1, 2, 3], [100, 2, 1, 10])) //[1,2,3,10,100]
+        
+    </script>
+
+</body>
+
+</html>

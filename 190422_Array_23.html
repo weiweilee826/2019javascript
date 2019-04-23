@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>23 JS, difference between two arrays</title>
+</head>
+
+<body>
+    <div>找出兩個陣列中不一樣的</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-23.php"></a>
+    <a href="https://medium.com/@alvaro.saburido/set-theory-for-arrays-in-es6-eb2f20a61848"></a>
+
+    <script>
+        function differenceOf2Arrays(arr1, arr2) {
+            arr1 = arr1.toString().split(",").map(Number);
+            arr2 = arr2.toString().split(",").map(Number);
+            return arr1.filter(x => !arr2.includes(x)).concat(arr2.filter(x => !arr1.includes(x)));
+
+        }
+
+        console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10])); //[3,10,100]
+        console.log(differenceOf2Arrays([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5, 6]])); //[6]
+        
+    </script>
+
+</body>
+
+</html>

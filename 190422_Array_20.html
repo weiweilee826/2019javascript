@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>20 Find duplicate values in a JavaScript array</title>
+</head>
+
+<body>
+    <div>把重複的陣列內容列出來</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-22.php"></a>
+
+    <script>
+        function find_duplicate_in_array(arr) {
+            var result = [];
+            var sort = arr.sort();
+            for (var i = 0; i < sort.length; i++) {
+                if (sort[i] == sort[i + 1]) {
+                    result.push(sort[i]);
+                }
+            }
+            return result;
+        }
+
+        console.log(find_duplicate_in_array([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6])) //4,7
+        
+    </script>
+
+</body>
+
+</html>

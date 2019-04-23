@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>25 to sort an lowing array of objects by title value</title>
+</head>
+
+<body>
+    <div>排序title名稱</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-25.php"></a>
+
+    <script>
+        const library = [{
+                author: 'Bill Gates',
+                title: 'The Road Ahead',
+                libraryID: 1254
+            },
+            {
+                author: 'Steve Jobs',
+                title: 'Walter Isaacson',
+                libraryID: 4264
+            },
+            {
+                author: 'Suzanne Collins',
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                libraryID: 3245
+            }
+        ];
+
+        function compare_to_sort(a, b) {
+            return a.title > b.title ? 1 : -1;
+        }
+
+        console.log(library.sort(compare_to_sort));
+        
+    </script>
+
+</body>
+
+</html>
