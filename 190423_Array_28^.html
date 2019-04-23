@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>28 Write a JavaScript function to find the longest common starting substring in a set of strings</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-28.php"></a>
+
+    <script>
+        function longest_common_starting_substring (arr) {
+            var result = "";
+            var str1 = arr[0];
+            var str2 = arr[1];
+            for (var i = 0; i < str1.length; i++) {
+                while (str1[i] == str2[i]) {
+                    result += str1[i];
+                    break;
+                }
+            }
+            return result;
+        }
+
+        console.log(longest_common_starting_substring(['go', 'google'])); // go
+        console.log(longest_common_starting_substring(['SQLInjection', 'SQLTutorial'])); // SQL
+        console.log(longest_common_starting_substring(['abcd', '1234']));
+        
+    </script>
+
+</body>
+
+</html>
