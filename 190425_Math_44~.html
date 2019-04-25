@@ -12,7 +12,13 @@
     <div>找出因數只有2,3,5的質因數</div>
     <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-44.php"></a>
     <script>
+        function isHammingNumber(num) {
+            while (num % 5 === 0) num /= 5;
+            while (num % 3 === 0) num /= 3;
+            while (num % 2 === 0) num /= 2;
 
+            return num == 1;
+        }
     </script>
 
 </body>

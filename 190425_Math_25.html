@@ -12,6 +12,13 @@
     <div></div>
     <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-25.php"></a>
     <script>
+        function currency_math(num1, num2) {
+            var n1 = num1.replace("$", "");
+            var n2 = num2.replace("$", "");
+            return parseFloat(n1) + parseFloat(n2);
+        }
+
+        console.log(currency_math("$40.24", "$21.57")); //61.81
         
     </script>
 

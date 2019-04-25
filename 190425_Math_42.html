@@ -12,6 +12,17 @@
     <div></div>
     <a href="https://www.w3resource.com/javascript-exercises/javascript-math-exercise-42.php"></a>
     <script>
+        function product_Range(n) {
+            return n == 1 ? n : n * product_Range(--n);
+        }
+
+        function combinations(n, r) {
+            return product_Range(n) / (product_Range(r) * product_Range(n - r));
+        }
+
+        console.log(combinations(6, 2)); //15
+        console.log(combinations(5, 3)); //10
+
     </script>
 
 </body>
