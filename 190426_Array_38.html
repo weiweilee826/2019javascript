@@ -5,15 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>36</title>
+    <title>38 JavaScript function to move an array element from one position to another</title>
 </head>
 
 <body>
     <div></div>
-    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-36.php"></a>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-38.php"></a>
 
     <script>
-        
+        function move(arr, start, end) {
+            var index = arr.splice(start, 1)[0];
+            if (end < 0) {
+                end += 1;
+            }
+            arr.splice(end, 0, index);
+            return arr;
+        }
+
+        console.log(move([10, 20, 30, 40, 50], 0, 2)); //[20,30,10,40,50]
+        console.log(move([10, 20, 30, 40, 50], -1, -2)); //[10,20,30,50,40]
     </script>
 
 </body>

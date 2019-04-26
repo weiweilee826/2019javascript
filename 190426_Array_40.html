@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>40 to generate an array of given length, the content of the array is integer numbers, increase by one from
+        starting</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-40.php"></a>
+
+    <script>
+        function array_range(start, range) {
+            var arr = [];
+            for (var i = 0; i < range; i++) {
+                arr[i] = start++;
+            }
+            return arr;
+        }
+
+        console.log(array_range(1, 4)); //[1,2,3,4]
+        console.log(array_range(-6, 4)); //[-6,-5,-4,-3]
+        
+    </script>
+
+</body>
+
+</html>
