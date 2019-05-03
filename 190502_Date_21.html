@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>21 to get a full textual representation of the day of the week (Sunday through Saturday)</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-21.php"></a>
+
+    <script>
+        function long_Days(dt) {
+            var longDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            return longDays[dt.getDay()];
+        }
+
+        console.log(long_Days(new Date(2015, 10, 1))); //Sunday
+        
+    </script>
+
+</body>
+
+</html>

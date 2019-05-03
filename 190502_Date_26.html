@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>26 to get a numeric representation of a month, with leading zeros (01 through 12)</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-26.php"></a>
+
+    <script>
+        function numeric_month(dt) {
+            return (dt.getMonth() < 9 ? '0' : '') + (dt.getMonth() + 1);
+        }
+
+        dt = new Date(2015, 10, 1);
+        console.log(numeric_month(dt)); //11
+        
+    </script>
+
+</body>
+
+</html>

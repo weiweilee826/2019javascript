@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>23 to get English ordinal suffix for the day of the month, 2 characters (st, nd, rd or th.)</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-23.php"></a>
+
+    <script>
+        function english_ordinal_suffix(dt) {
+            str = ['st', 'nd', 'rd', 'th'];
+            var dd = dt.getDate();
+            if (dd > 10 && dd < 21) {
+                return dd + str[3];
+            }if (dd % 10 == 1) {
+                return dd + str[0];
+            }if (dd % 10 == 2) {
+                return dd + str[1];
+            }if (dd % 10 == 3) {
+                return dd + str[2];
+            }
+
+        }
+
+        console.log(english_ordinal_suffix(new Date(2015, 10, 1))) //1st
+        
+    </script>
+
+</body>
+
+</html>

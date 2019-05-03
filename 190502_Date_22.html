@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>22 to get ISO-8601 numeric representation of the day of the week (1 (for Monday) to 7 (for Sunday))</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-22.php"></a>
+
+    <script>
+        function ISO_numeric_date(dt) {
+            return (dt.getDay() === 0 ? 7 : dt.getDay()); 
+        }
+
+        dt = new Date(2015, 10, 1);
+        console.log(ISO_numeric_date(dt)); //7
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>27 to get a short textual representation of a month, three letters (Jan through Dec)</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-27.php"></a>
+
+    <script>
+        function short_months(dt) {
+            var shortMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            return shortMonths[dt.getMonth()];
+        }
+
+        console.log(short_months(new Date(2015, 10, 1))); //Nov
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>19 to get the day of the month, 2 digits with leading zeros</title>
+</head>
+
+<body>
+    <div>計算這個月的第幾天</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-19.php"></a>
+
+    <script>
+        function day_of_the_month(dt) {
+            return (dt.getDate() < 10 ? '0' : '') + dt.getDate();
+        }
+
+        console.log(day_of_the_month(new Date(2015, 10, 1))); //01
+
+    </script>
+
+</body>
+
+</html>
