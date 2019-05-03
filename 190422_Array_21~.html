@@ -13,7 +13,17 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-21.php"></a>
 
     <script>
-        
+
+        var flatten = function (arr) {
+            return arr.reduce((pv, cv) => pv.concat(Array.isArray(cv) ? flatten(cv) : cv), []);
+        }
+
+        var flatten1 = function (arr) {
+            return arr.reduce((pv, cv) => pv.concat(cv), []);
+        }
+
+        console.log(flatten([1, [2], "", [3, [[4]]], [5, 6]]));
+
     </script>
 
 </body>

@@ -13,7 +13,14 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-24.php"></a>
 
     <script>
+        function ISO8601_week_no(dt) {
+            var stime = new Date(dt.getFullYear(), 0, 1) - (new Date(dt.getFullYear(), 0, 1).getDay() - 1) * 86400000;
+            var etime = dt;
+            return Math.ceil((etime - stime + 1) / 604800000);
+        }
 
+        dt = new Date(2019, 0, 7);
+        console.log(ISO8601_week_no(dt));
     </script>
 
 </body>
