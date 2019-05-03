@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5 Compare Date</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-5.php"></a>
+
+    <script>
+        function compare_dates(date1, date2) {
+            if (date1 > date2) {
+                return "Date1 > Date2";
+            } else if (date1 < date2) {
+                return ("Date2 > Date1");
+            } else {
+                return ("Date1 = Date2");
+            }
+        }
+
+        console.log(compare_dates(new Date('11/14/2013 00:00'), new Date('11/14/2013 00:00')));
+        console.log(compare_dates(new Date('11/14/2013 00:01'), new Date('11/14/2013 00:00')));
+        console.log(compare_dates(new Date('11/14/2013 00:00'), new Date('11/14/2013 00:01')));
+
+        // Date1 = Date2
+        // Date1 > Date2
+        // Date2 > Date1
+        
+    </script>
+
+</body>
+
+</html>

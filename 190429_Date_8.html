@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8 JavaScript difference between two dates in days</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-8.php"></a>
+
+    <script>
+        function date_diff_indays(day1, day2) {
+            var d1 = new Date(day1);
+            var d2 = new Date(day2);
+            return Math.round((d2 - d1) / (1000 * 60 * 60 * 24));
+        }
+
+        console.log(date_diff_indays('04/02/2014', '11/04/2014')); //216
+        console.log(date_diff_indays('12/02/2014', '11/04/2014')); //-28
+    </script>
+
+</body>
+
+</html>

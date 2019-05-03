@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2 Get the current date</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-2.php"></a>
+
+    <script>
+        function crurrentDate(x) {
+            var today = new Date();
+            var day = today.getDate();
+            var month = today.getMonth() + 1;
+            var year = today.getFullYear();
+
+            if (day < 10) {
+                day += '0';
+            }
+            if (month < 10) {
+                month += '0';
+            }
+            return (month + x + day + x + year);
+        }
+
+        console.log(crurrentDate('/')); // 40/29/2019
+        console.log(crurrentDate('-')); // 40-29-2019
+        
+    </script>
+
+</body>
+
+</html>
