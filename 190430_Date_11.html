@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>11 Maximum date from an array of dates</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-11.php"></a>
+
+    <script>
+        function max_date(arr) {
+            var max = arr[0];
+            if (arr[1] > arr[0]) {
+                max = arr[1];
+            }
+            if (arr[2] > arr[1]) {
+                max = arr[2];
+            }
+            return max;
+        }
+
+        console.log(max_date(['2015/02/01', '2015/02/02', '2015/01/03'])); //2015/02/02
+        
+    </script>
+
+</body>
+
+</html>

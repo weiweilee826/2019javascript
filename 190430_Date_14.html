@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>14 to get the amount of days of a year</title>
+</head>
+
+<body>
+    <div>計算指定年份的天數</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-14.php"></a>
+
+    <script>
+        function days_of_a_year(year) {
+            return year % 400 == 0 || (year % 100 !== 0 && year % 4 === 0) ? 366 : 365;
+        }
+
+        console.log(days_of_a_year(2015)); //365
+        console.log(days_of_a_year(2016)); //366
+        
+    </script>
+
+</body>
+
+</html>

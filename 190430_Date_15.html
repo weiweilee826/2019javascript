@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>15 to get the the quarter (1 to 4) of the year</title>
+</head>
+
+<body>
+    <div>計算指定日期在一年中的那一季</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-15.php"></a>
+
+    <script>
+        function quarter_of_the_year(dt) {
+            // getMonth可返回月份的數字
+            return Math.ceil((dt.getMonth() + 1)/3);
+        }
+
+        console.log(quarter_of_the_year(new Date())); //2
+        console.log(quarter_of_the_year(new Date(2015, 1, 21))); //1
+        console.log(quarter_of_the_year(new Date(2015, 10, 18))); //4
+
+    </script>
+
+</body>
+
+</html>

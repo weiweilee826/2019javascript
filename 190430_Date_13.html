@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>13 Return the number of minutes in hours and minutes</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-13.php"></a>
+
+    <script>
+        function timeConvert(num) {
+            var hours = (num / 60);
+            var rhours = Math.floor(hours);
+            var minutes = Math.round((rhours - hours) * 60);
+            return num + " minutes = " + rhours + " hour(s) and " + minutes + " minute(s)";
+        }
+
+        console.log(timeConvert(200)); //200 minutes = 3 hour(s) and -20 minute(s).
+        
+    </script>
+
+</body>
+
+</html>
