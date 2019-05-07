@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>45 to get time differences in hours between two dates</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-45.php"></a>
+
+    <script>
+        function diff_hours(dt1, dt2) {
+            return Math.abs(dt2 - dt1) / (60 * 60 * 1000);
+        }
+
+        dt1 = new Date(2014, 10, 2);
+        dt2 = new Date(2014, 10, 3);
+        console.log(diff_hours(dt1, dt2)); //24
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>40 to get timezone offset in seconds</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-40.php"></a>
+
+    <script>
+        //getTimezoneOffset>本地時間與GMT 時間之間的時間差，以分鐘為單位
+        function timezone_offset_in_seconds(dt) {
+            var d = dt.getTimezoneOffset() * 60;
+            return d < 0 ? -d : d;
+        }
+        console.log(timezone_offset_in_seconds(new Date())); 
+
+    </script>
+
+</body>
+
+</html>

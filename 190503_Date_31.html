@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>31 to get uppercase Ante meridiem and Post meridiem</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-31.php"></a>
+
+    <script>
+        function upper_am_pm(dt) {
+            return dt.getHours() < 12 ? 'AM' : 'PM';
+        }
+
+        dt = new Date(1989, 10, 1);
+        console.log(upper_am_pm(dt)); //AM
+
+    </script>
+
+</body>
+
+</html>

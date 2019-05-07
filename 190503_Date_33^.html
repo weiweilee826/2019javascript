@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>33 to get 12-hour format of an hour with leading zeros</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-33.php"></a>
+
+    <script>
+        function hours_with_zeroes(dt) {
+            var h = dt.getHours();
+            return ((h % 12 || 12) < 10 ? '0' : '') + (h % 12 || 12);
+        }
+
+
+        dt = new Date();
+        console.log(hours_with_zeroes(dt));
+
+        dt = new Date(1989, 10, 1);
+        console.log(hours_with_zeroes(dt)); //12
+    </script>
+
+</body>
+
+</html>

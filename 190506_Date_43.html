@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>43 to add specified months to a date</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-43.php"></a>
+
+    <script>
+        function add_months(dt, month) {
+            return new Date(dt.setMonth(dt.getMonth() + month));
+        }
+
+        dt = new Date(2014, 10, 2);
+        console.log(add_months(dt, 10).toString()); //Wed Sep 02 2015 00:00:00 GMT+0800 (台北標準時間)
+
+    </script>
+
+</body>
+
+</html>

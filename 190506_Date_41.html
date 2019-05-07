@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>41 to add specified years to a date</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-41.php"></a>
+
+    <script>
+        function add_years(dt, year) {
+            dt.setFullYear(dt.getFullYear() + year);
+            return dt.toString();
+        }
+
+        console.log(add_years(new Date(2014, 10, 2), 10)); //Sat Nov 02 2024 00:00:00 GMT+0800 (台北標準時間)
+        
+    </script>
+
+</body>
+
+</html>
