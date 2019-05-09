@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>14 Insert a string within a specific position in another string</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-14.php"></a>
+    <script>
+        // ar myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+        // var removed = myFish.splice(2, 0, 'drum');
+        // myFish 為 ["angel", "clown", "drum", "mandarin", "sturgeon"] 
+        // removed 為 [], 沒有元素被刪除
+
+        function insert(str1, str2, pos) {
+            var arr = str1.split('');
+            arr.splice(pos, 0, str2);
+            return arr.join('');
+        }
+
+        console.log(insert('We are doing some exercises.'));
+        console.log(insert('We are doing some exercises.', 'JavaScript '));
+        console.log(insert('We are doing some exercises.', 'JavaScript ', 18));
+        // We are doing some exercises.
+        // JavaScript We are doing some exercises.
+        // We are doing some JavaScript exercises.
+        
+    </script>
+
+</body>
+
+</html>

@@ -13,9 +13,8 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-16.php"></a>
 
     <script>
-        // 恩 應該沒什麼問題
         function days_passed(dt) {
-
+            return (dt - (new Date(dt.getFullYear(), 0, 0))) / (1000 * 60 * 60 * 24);
         }
 
         console.log(days_passed(new Date(2015, 0, 15))); //15

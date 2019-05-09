@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>20 Write a JavaScript function that can pad (left, right) a string to get to a determined length</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-20.php"></a>
+    <script>
+        function formatted_string(pad, str, pos) {
+            str = str.toString();
+            if (pos === 'l') {
+                return pad.slice(0, pad.length - str.length) + str;
+            } else {
+                return str + pad.slice(str.length);
+            }
+        }
+
+        console.log(formatted_string('0000', 123, 'l')); //0123
+        console.log(formatted_string('00000000', 123, '')); //12300000
+        
+    </script>
+
+</body>
+
+</html>

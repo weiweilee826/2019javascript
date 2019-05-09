@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>24 to truncate a string to a certain number of words</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-24.php"></a>
+    <script>
+        function truncate(str, num) {
+            return str.split(' ').splice(0, num).join(' ');
+        }
+
+        console.log(truncate('The quick brown fox jumps over the lazy dog', 4)); //The quick brown fox
+        
+    </script>
+
+</body>
+
+</html>

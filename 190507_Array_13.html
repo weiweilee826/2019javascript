@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>13 JS Bin</title>
+    <style>
+        body {
+            padding-top: 50px
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="text1"></input>
+    <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+    <input type="button" id="button2" value="Display" onclick="display_array();"></input>
+    <div id="Result"></div>
+    </head>
+
+    <body>
+        <div></div>
+        <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-13.php"></a>
+
+        <script>
+            var arr = [];
+            function add_element_to_array() {
+                var item = document.getElementById('text1');
+                arr.push(item.value);
+                item.value = "";
+                item.focus();
+            }
+
+            function display_array() {
+                var result = document.getElementById('Result').innerHTML = "element is : " + arr;
+            }
+
+        </script>
+
+    </body>
+
+</html>

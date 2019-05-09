@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>13 to concatenates a given string n times (default is 1)</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-13.php"></a>
+    <script>
+        function repeat(str, num) {
+            var result = '';
+            if(typeof(num) == "undefined"){
+                return str;
+            }
+            for (let i = 0; i < num; i++) {
+                result += str;
+            }
+            return result;
+        }
+
+        console.log(repeat('Ha!')); // Ha!
+        console.log(repeat('Ha!', 2)); // Ha!Ha!
+        console.log(repeat('Ha!', 3)); // Ha!Ha!Ha!
+        
+    </script>
+
+</body>
+
+</html>

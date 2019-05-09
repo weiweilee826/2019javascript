@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>15 Formats a number to a human-readable string</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-15.php"></a>
+    <script>
+        function humanize_format(num) {
+            var ordinal = ["st", "nd", "rd", "th"]
+            if (num === undefined) {
+                return undefined;
+            }
+            return (num % 10) < 4 ? num + ordinal[num % 10] : num + ordinal[0];
+        }
+
+        console.log(humanize_format()); //undefined
+        console.log(humanize_format(1)); //1st
+        console.log(humanize_format(8)); //8th
+    </script>
+
+</body>
+
+</html>

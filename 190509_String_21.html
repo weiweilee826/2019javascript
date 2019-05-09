@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>21 to repeat a string a specified times</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-21.php"></a>
+    <script>
+        function repeat_string(str, num) {
+            if ((str == undefined) || (num < 0) || (num === Infinity) || (num == undefined)) {
+                return ('Error in string or count');
+            }
+            for (var i = 0; i < num; i++) {
+                str += str[i];
+            }
+            return str;
+        }
+
+        console.log(repeat_string('a', 4)); //aaaa
+        console.log(repeat_string('a')); //Error in string or count.
+        console.log(repeat_string('a', -2));
+        console.log(repeat_string('a', Infinity));
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>21 Flatten a nested array</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-21.php"></a>
+
+    <script>
+
+        var flatten = function (arr) {
+            return arr.reduce((pv, cv) => pv.concat(Array.isArray(cv) ? flatten(cv) : cv), []);
+        }
+
+        var flatten1 = function (arr) {
+            return arr.reduce((pv, cv) => pv.concat(cv), []);
+        }
+
+        console.log(flatten([1, [2], "", [3, [[4]]], [5, 6]]));
+
+    </script>
+
+</body>
+
+</html>

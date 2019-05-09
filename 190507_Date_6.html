@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6 Add minutes to a date object</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-6.php"></a>
+
+    <script>
+        var add_minutes = function (dt, minutes) {
+            return new Date(dt.getTime() + minutes * 60000);
+        }
+        console.log(add_minutes(new Date(2014, 10, 2), 30).toString()); //Sun Nov 02 2014 00:30:00 GMT+0800 (台北標準時間)
+
+    </script>
+
+</body>
+
+</html>
