@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>38 to create a case-insensitive search</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-38.php"></a>
+    <script>
+        function case_insensitive_search(str, search) {
+            //matches the characters ig literally (case sensitive)
+            let result = new RegExp(search, "ig");
+            return result.test(str) ? "Matched" : "Not Matched";
+        }
+
+        console.log(case_insensitive_search('JavaScript Exercises', 'exercises')); //Matched
+        console.log(case_insensitive_search('JavaScript Exercises', 'Exercises')); //Matched
+        console.log(case_insensitive_search('JavaScript Exercises', 'Exercisess')); //Not Matched
+
+    </script>
+
+</body>
+
+</html>

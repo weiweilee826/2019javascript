@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>3</title>
+    <title>32 to remove non-printable ASCII chars</title>
 </head>
 
 <body>
     <div></div>
-    <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-3.php"></a>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-32.php"></a>
     <script>
-       
+        /* Match a single character not present in the list below [^\x20-\x7E]
+        \x20-\x7E a single character in the range between   (index 32) and ~ (index 126) (case sensitive)*/
+        
+        function remove_non_ascii(str) {
+            return str.replace(/[^\x20-\x7E]/g, '');
+        }
 
+        console.log(remove_non_ascii('äÄçÇéÉêPHP-MySQLöÖÐþúÚ')); //PHP-MySQL
     </script>
 
 </body>
