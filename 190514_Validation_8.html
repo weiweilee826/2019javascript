@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8 to count the number of vowels in a given string</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-regexp-exercise-8.php"></a>
+    <script>
+        function vowel_count(str) {
+            return str.match(/[aeiou]/gi).length;
+        }
+
+        console.log(vowel_count('The quick brown fox jumps over the lazy dog')); //11
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6 Count number of words in a string</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-regexp-exercise-6.php"></a>
+    <script>
+        function count_words(str) {
+            var re = /\s+/g;
+            return str.trim().replace(re, ' ').split(' ').length;
+        }
+
+        console.log(count_words('The quick brown fox jumps over the lazy dog.')) //9
+        
+    </script>
+
+</body>
+
+</html>

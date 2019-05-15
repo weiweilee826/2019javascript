@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>11 to check whether a given value is time string or not</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-regexp-exercise-11.php"></a>
+    <script>
+        function is_timeString(str) {
+            var re = /^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$/;
+            return re.test(str);
+        }
+
+        console.log(is_timeString("11:35:30")); //t
+        console.log(is_timeString("90:90:90")); //f
+        
+    </script>
+
+</body>
+
+</html>

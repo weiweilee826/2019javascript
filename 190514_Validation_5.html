@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5 Trim function using regular expression</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-regexp-exercise-5.php"></a>
+    <script>
+        //\s matches any whitespace character
+
+        function Trim(str) {
+            return str.replace(/\s/g, '');
+        }
+
+        console.log(Trim(' w3resource ')); //w3resource
+
+    </script>
+
+</body>
+
+</html>
