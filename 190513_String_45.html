@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>45 to get humanized number with the correct suffix</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-45.php"></a>
+    <script>
+        function humanize(num) {
+            var ordinal = ["st", "nd", "rd", "th"]
+            if (num === undefined) {
+                return undefined;
+            }
+            return (num % 10) < 4 ? num + ordinal[num % 10] : num + ordinal[0];
+        }
+
+        console.log(humanize(1)); //1st
+        console.log(humanize(20)); //20th
+        console.log(humanize(302)); //302nd
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3 JavaScript Regular expression to valid an email address</title>
+</head>
+
+<body>
+    <div>檢查email</div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-regexp-exercise-3.php"></a>
+    <script>
+        function validateEmail(email) {
+            var re =
+                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        console.log(validateEmail('me-info@example.com')) //true
+        
+    </script>
+
+</body>
+
+</html>

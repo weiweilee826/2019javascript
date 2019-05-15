@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1 JavaScript Regular expression to check string's first character is uppercase or not</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-regexp-exercise-1.php"></a>
+    <script>
+        // ^ asserts position at start of the string
+        // Match a single character present in the list below [A-Z]
+
+        function match(str) {
+            return (/^[A-Z]/).test(str);
+        }
+
+        console.log(match('Abcd')) //true
+        console.log(match('abcd')) //false
+        
+    </script>
+
+</body>
+
+</html>
