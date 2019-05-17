@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>20 to check a given value contains alpha, dash and underscore</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-regexp-exercise-20.php"></a>
+    <script>
+       function is_domain(str) {
+            var re = /^[a-z0-9_\-]+$/i;
+            return re.test(str);
+        }
+
+        console.log(is_alphaDash('12-133')); //t
+        console.log(is_alphaDash('100_23')); //t
+        
+    </script>
+
+</body>
+
+</html>

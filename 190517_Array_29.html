@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>29 Write a JavaScript function to fill an array with values (numeric, string with one character) on supplied
+        bounds</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-29.php"></a>
+
+    <script>
+        function num_string_range(start, end, step) {
+            var s = start.charCodeAt(0);
+            var e = end.charCodeAt(0);
+            var result = '';
+            for (var i = s; i <= e; i++) {
+                if (i % step == 0) {
+                    result += String.fromCharCode(i-1);
+                }
+            }
+            return result.split('');
+        }
+
+        console.log(num_string_range('a', "z", 2)); //["a","c","e","g","i","k","m","o","q","s","u","w","y"]
+
+    </script>
+
+</body>
+
+</html>
