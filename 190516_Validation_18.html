@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>18 to check whether a given value represents a domain or not</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-regexp-exercise-18.php"></a>
+    <script>
+        function is_domain(str) {
+            var re = /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,6}$/i;
+            return re.test(str);
+        }
+
+        console.log(is_domain('www.npm.co.uk')); //t
+        console.log(is_domain('http://www.example.com')); //f
+        
+    </script>
+
+</body>
+
+</html>

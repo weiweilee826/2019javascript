@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8 Create a clock and display the time in each second</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-object-exercise-8.php"></a>
+    <script>
+        function my_Clock() {
+            var current = new Date();
+            console.log(current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds());
+        }
+
+        setInterval(my_Clock, 1000);
+        // 14:45:52
+        // 14:45:53
+        // 14:45:54...
+        
+    </script>
+
+</body>
+
+</html>

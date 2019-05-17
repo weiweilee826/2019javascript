@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4 Reading status of a book library</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-object-exercise-4.php"></a>
+    <script>
+        var library = [{
+                title: 'Bill Gates',
+                author: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                title: 'Steve Jobs',
+                author: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                author: 'Suzanne Collins',
+                readingStatus: false
+            }
+        ];
+
+        for (var i = 0; i < library.length; i++) {
+            var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
+            if (library[i].readingStatus) {
+                console.log("Already read " + book);
+            } else {
+                console.log("You still need to read " + book);
+            }
+        }
+
+        // Already read 'Bill Gates' by The Road Ahead.
+        // Already read 'Steve Jobs' by Walter Isaacson.
+        // You still need to read 'Mockingjay: The Final Book of The Hunger Games' by Suzanne Collins.
+        
+    </script>
+
+</body>
+
+</html>
