@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>12 to check whether a given value is US zip code or not</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-regexp-exercise-12.php"></a>
+    <script>
+        /*
+        \d{5} matches a digit (equal to [0-9])
+        {5} Quantifier — Matches exactly 5 times
+        1st Capturing Group (-\d{4})?
+        ? Quantifier — Matches between zero and one times, as many times as possible, giving back as needed (greedy)
+        - matches the character - literally (case sensitive)
+        \d{4} matches a digit (equal to [0-9])
+        {4} Quantifier — Matches exactly 4 times
+        Negative Lookahead (?!-)
+        Assert that the Regex below does not match
+        - matches the character - literally (case sensitive) 
+        */
+        function is_usZipCode(str) {
+            var re = /^\d{5}(-\d{4})?(?!-)$/;
+            return re.test(str);
+        }
+
+        console.log(is_usZipCode("03201-2150")); //t
+        console.log(is_usZipCode("7892")); //f
+    </script>
+
+</body>
+
+</html>

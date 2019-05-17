@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>17 to check whether a given value is hexcolor value or not</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-regexp-exercise-17.php"></a>
+    <script>
+        function is_hexcolor(str) {
+            var re = /^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
+            return re.test(str);
+        }
+
+        console.log(is_hexcolor("#444"));
+        console.log(is_hexcolor("#3333")); //f
+        
+    </script>
+
+</body>
+
+</html>
