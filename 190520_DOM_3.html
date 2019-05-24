@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3 Set the background color of a paragraph</title>
+</head>
+
+<body>
+    <input type="button" value="Click to set paragraph background color" onclick="set_background()">
+    <p>green</p>
+    <p>orange</p>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-dom-exercise-3.php"></a>
+
+    <script>
+        function set_background() {
+            docBody = document.getElementsByTagName("body")[0];
+            myBodyElements = docBody.getElementsByTagName("p");
+            myp1 = myBodyElements[0];
+            myp1.style.background = "green";
+            myp2 = myBodyElements[1];
+            myp2.style.background = "orange";
+        }
+    </script>
+
+</body>
+
+</html>

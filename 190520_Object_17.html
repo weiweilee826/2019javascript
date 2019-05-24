@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>17 to check if an object contains given property</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-object-exercise-17.php"></a>
+    <script>
+        function hasKey(obj, key) {
+            return obj != null && hasOwnProperty.call(obj, key);
+        }
+        console.log(hasKey({
+            red: "#FF0000",
+            green: "#00FF00",
+            white: "#FFFFFF"
+        }, "green"));
+        
+    </script>
+
+</body>
+
+</html>

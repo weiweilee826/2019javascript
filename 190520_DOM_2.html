@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2 Return first and last name from a form - w3resource</title>
+    <style>
+        body {
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" onsubmit="getFormvalue()">
+        First name: <input type="text" name="fname" value="David"><br>
+        Last name: <input type="text" name="lname" value="Beckham"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <body>
+        <a href="https://www.w3resource.com/javascript-exercises/javascript-dom-exercise-2.php"></a>
+
+        <script>
+            function getFormvalue() {
+                event.preventDefault();
+                var fname = document.querySelector('[name="fname"]').value;
+                var lname = document.querySelector('[name="lname"]').value;
+                console.log("full name: ", fname, lname);
+            }
+
+            
+        </script>
+
+    </body>
+
+</html>
