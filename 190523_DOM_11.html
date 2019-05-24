@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>11 Display a random image</title>
+    <style>
+        body {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="jsstyle" onclick="display_random_image();">Show Image</button>
+    </div>
+
+    <body>
+        <div></div>
+        <a href="https://www.w3resource.com/javascript-exercises/javascript-dom-exercise-11.php"></a>
+
+        <script>
+            function display_random_image() {
+                var theImages = [{
+                    src: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+                    width: "240",
+                    height: "160"
+                }, {
+                    src: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+                    width: "320",
+                    height: "195"
+                }, {
+                    src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+                    width: "500",
+                    height: "343"
+                }];
+
+                var arr = [];
+                for (var i = 0; i < theImages.length; i++) {
+                    arr[i] = new Image();
+                    arr[i].src = theImages[i].src;
+                    arr[i].width = theImages[i].width;
+                    arr[i].height = theImages[i].height;
+
+                }
+                var newImage = arr[Math.floor(Math.random() * arr.length)];
+                var images = document.getElementsByTagName('theImages');
+                for (var j = 0; j < images.length; j++) {
+                    images[0].parentNode.removeChild(images[0]);
+                }
+                document.body.appendChild(newImage);
+            }
+        </script>
+
+    </body>
+
+</html>

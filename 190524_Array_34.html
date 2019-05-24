@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>34 JavaScript function to get nth largest element from an unsorted array</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-array-exercise-34.php"></a>
+
+
+    <script>
+        // 再學一個排序法好了 merge sort
+        // https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95
+
+        function nthlargest(arr, num) {
+
+            function mergeSort(arr) {
+                if (arr.length <= 1) {
+                    return arr;
+                }
+                var middle = Math.floor(arr.length / 2);
+                var first = arr.slice(0, middle);
+                var end = arr.slice(middle);
+                var result = sortBeforeMerge(mergeSort(first), mergeSort(end));
+                return result;
+            }
+
+            function sortBeforeMerge(arr1, arr2) {
+                var sort_arr = [];
+
+                while (arr1.length && arr2.length) {
+                    var minElement = (arr1[0] > arr2[0]) ? arr1.shift() : arr2.shift();
+                    sort_arr.push(minElement);
+                }
+                return arr1.length ? sort_arr.concat(arr1) : sort_arr.concat(arr2);
+            }
+            return arr[num - 1];
+        }
+
+        console.log(nthlargest([43, 56, 23, 89, 88, 90, 99, 652], 4)); //89
+        
+    </script>
+
+</body>
+
+</html>

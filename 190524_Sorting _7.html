@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7 JavaScript program of Bubble sort</title>
+</head>
+
+<body>
+    <div></div>
+    <a
+        href="https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-7.php"></a>
+
+    <script>
+        function bubble_Sort(arr) {
+            var l = arr.length;
+            for (var i = 0; i < l - 1; i++) {
+                for (var j = i + 1; j < l; j++) {
+                    if (arr[i] > arr[j]) {
+                        var temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        console.log(bubble_Sort([3, 0, 2, 5, -1, 4, 1])); //[-1,0,1,2,3,4,5]
+
+    </script>
+
+</body>
+
+</html>

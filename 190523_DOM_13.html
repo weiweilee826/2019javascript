@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>13 Window Size : height and width</title>
+</head>
+
+<body onload="getSize()" onresize="getSize()">
+    <div id="wh">
+        <!-- Place height and width size here! -->
+    </div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-dom-exercise-13.php"></a>
+
+    <script>
+        function getSize() {
+            var w = document.documentElement.clientWidth;
+            var h = document.documentElement.clientHeight;
+
+            document.getElementById('wh').innerHTML = "<h2>Width: " + w + " Height: " + h + "</h1>";
+        }
+        
+    </script>
+
+</body>
+
+</html>

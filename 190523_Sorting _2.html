@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2 JavaScript program of Merge sort</title>
+</head>
+
+<body>
+    <div></div>
+    <a
+        href="https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-2.php"></a>
+
+    <a href="https://pjchender.blogspot.com/2017/09/merge-sort.html">Merge sort 演算法</a>
+
+    <script>
+        function merge_sort(arr1, arr2) {
+            var i = 0;
+            var j = 0;
+            var result = [];
+
+            while (i < arr1.length || j < arr2.length) {
+                if (i == arr1.length) {
+                    result.push(arr2[j]);
+                    j++;
+                } else if (j == arr2.length || arr1[i] <= arr2[j]) {
+                    result.push(arr1[i]);
+                    i++;
+                } else {
+                    result.push(arr2[j]);
+                    j++;
+                }
+            }
+            return result;
+        }
+
+        console.log(merge_sort([1, 3, 4], [3, 7, 9])); //[1,3,3,4,7,9]
+
+
+
+        function merge_sort1(arr1, arr2) {
+            var result = [];
+
+            while (arr1.length && arr2.length) {
+                var minElement = (arr1[0] < arr2[0]) ? arr1.shift() : arr2.shift();
+                result.push(minElement);
+            }
+            result = arr1.length ? result.concat(arr1) : result.concat(arr2);
+            return result;
+        }
+
+        console.log(merge_sort1([1, 3, 4], [3, 7, 9])); //[1,3,3,4,7,9]
+
+    </script>
+
+</body>
+
+</html>
