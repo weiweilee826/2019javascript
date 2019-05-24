@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>39 to get difference to Greenwich time (GMT) in hours</title>
+</head>
+
+<body>
+    <div></div>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-date-exercise-39.php"></a>
+
+    <script>
+        function diff_to_GMT(dt) {
+            return (-dt.getTimezoneOffset() < 0 ? '-' : '+') + (Math.abs(dt.getTimezoneOffset() / 60) < 10 ? '0' : '') +
+                (Math.abs(dt.getTimezoneOffset() / 60)) + '00';
+        }
+
+        dt = new Date();
+        console.log(diff_to_GMT(dt)); //+0800
+        
+    </script>
+
+</body>
+
+</html>
