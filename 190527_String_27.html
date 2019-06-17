@@ -13,7 +13,16 @@
     <a href="https://www.w3resource.com/javascript-exercises/javascript-string-exercise-27.php"></a>
     <a href="https://pjchender.blogspot.com/2018/06/guide-unicode-javascript.html">寫之前先看</a>
     <script>
-       // 下次
+        function ascii_to_hexa(str) {
+            var arr1 = [];
+            for (var n = 0, l = str.length; n < l; n++) {
+                var hex = Number(str.charCodeAt(n)).toString(16);
+                arr1.push(hex);
+            }
+            return arr1.join('');
+        }
+
+        console.log(ascii_to_hexa('100')); //313030
         
     </script>
 
