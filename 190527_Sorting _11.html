@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>11 JavaScript program of Counting sort</title>
+</head>
+
+<body>
+    <div></div>
+    <a
+        href="https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-11.php"></a>
+
+    <script>
+        function countingSort(arr, min, max) {
+            var i, z = 0,
+                count = [];
+
+            for (i = min; i <= max; i++) {
+                count[i] = 0;
+            }
+
+            for (i = 0; i < arr.length; i++) {
+                count[arr[i]]++;
+            }
+
+            for (i = min; i <= max; i++) {
+                while (count[i]-- > 0) {
+                    arr[z++] = i;
+                }
+            }
+            return arr;
+        }
+        
+        var arra = [3, 0, 2, 5, 4, 1];
+        console.log(arra.length);
+        console.log("Original Array Elements");
+        console.log(arra);
+        console.log("Sorted Array Elements");
+        console.log(countingSort(arra, 0, 5));
+
+    </script>
+
+</body>
+
+</html>

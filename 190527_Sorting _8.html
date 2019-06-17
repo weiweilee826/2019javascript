@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8 JavaScript program of Cocktail sort</title>
+</head>
+
+<body>
+    <div></div>
+    <a
+        href="https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-8.php"></a>
+
+    <script>
+        function Cocktail_sort(arr) {
+            var swapped;
+            do {
+                for (var i = 0; i < arr.length - 2; i++) {
+                    if (arr[i] > arr[i + 1]) {
+                        var temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                        swapped = true;
+                    }
+                }
+                if (!swapped) {
+                    break;
+                }
+                swapped = false;
+                for (i = arr.length - 2; i > 0; i--) {
+                    if (arr[i] > arr[i + 1]) {
+                        var temp1 = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp1;
+                        swapped = true;
+                    }
+                }
+            } while (swapped);
+            return arr;
+        }
+
+        console.log(Cocktail_sort([3, 0, 2, 5, -1, 4, 1])); //[-1,0,1,2,3,4,5]
+
+    </script>
+
+</body>
+
+</html>
